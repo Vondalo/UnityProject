@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Player
 {
-    public class PlayerAnimationController : MonoBehaviour
+    public class PlayerAnimationController : NetworkBehaviour
     {
         Animator animator;
 
@@ -22,13 +23,26 @@ namespace Player
                 return;
 
             }
-            animator.SetFloat("X", x); animator.SetFloat("Y", y);
+            HandleAnimationServerRpc(x, y);
             SetState(true);
+        }
+
+        [ServerRpc]
+        private void HandleAnimationServerRpc(float x, float y)
+        {
+
+            animator.SetFloat("X", x); animator.SetFloat("Y", y);
+        }
+
+        [ServerRpc]
+        private void SetStateServerRpc(bool state)
+        {
+            animator.SetBool("isWalking", state);
         }
 
         public void SetState(bool state)
         {
-            animator.SetBool("isWalking", state);
+            SetStateServerRpc(state);
         }
     }
 }

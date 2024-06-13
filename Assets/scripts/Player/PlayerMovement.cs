@@ -4,9 +4,12 @@ using UnityEngine;
 using Unity.Netcode;
 using Unity.IO;
 
+using System;
+using TMPro;
+
 namespace Player
 {
-    public class PlayerMovement : NetworkBehaviour
+    public class PlayerMovement : Unity.Netcode.NetworkBehaviour
     {
         [SerializeField]
         private float speed;
@@ -26,6 +29,10 @@ namespace Player
         {
             animationController = GetComponent<PlayerAnimationController>();
         }
+
+
+
+
         public override void OnNetworkSpawn()
         {
             if (!IsOwner)
@@ -46,7 +53,7 @@ namespace Player
 
         void Update()
         {
-
+            
             rb.velocity = new Vector2(0, 0);
             if (!inDialogue())
             {
@@ -54,7 +61,7 @@ namespace Player
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        npc.ActivateDialogue();
+                        npc.ActivateDialogue(this.gameObject);
                     }
                 }
                 speedX = Input.GetAxisRaw("Horizontal");

@@ -361,6 +361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b210108c2be6696489a0786aefc16f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TextBox: {fileID: 0}
+  posLowerScreen: {x: 0, y: 0}
+  posUpperScreen: {x: 0, y: 0}
+  speed: 0
 --- !u!1 &313192655
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +799,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3660,7 +3664,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3937,6 +3941,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: deb1ceaf93eb9be46be357b631697c0b, type: 3}
   characterSprite: {fileID: 21300000, guid: 552a2e9c684d42247a68392ed16c3aad, type: 3}
   imageHolder: {fileID: 1730828764}
+  positionOnScreen: 0
 --- !u!114 &920903226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4163,7 +4168,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5539,6 +5544,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 326f6d6c17de7b044a36c57f02d7bc90, type: 3}
   characterSprite: {fileID: 21300000, guid: 552a2e9c684d42247a68392ed16c3aad, type: 3}
   imageHolder: {fileID: 1967879298}
+  positionOnScreen: 0
 --- !u!114 &1038264957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5695,6 +5701,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 326f6d6c17de7b044a36c57f02d7bc90, type: 3}
   characterSprite: {fileID: 21300000, guid: 552a2e9c684d42247a68392ed16c3aad, type: 3}
   imageHolder: {fileID: 316464575}
+  positionOnScreen: 0
 --- !u!114 &1367937306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6219,6 +6226,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 326f6d6c17de7b044a36c57f02d7bc90, type: 3}
   characterSprite: {fileID: 21300000, guid: 552a2e9c684d42247a68392ed16c3aad, type: 3}
   imageHolder: {fileID: 955829704}
+  positionOnScreen: 0
 --- !u!114 &1995470992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6478,6 +6486,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 326f6d6c17de7b044a36c57f02d7bc90, type: 3}
   characterSprite: {fileID: 21300000, guid: 552a2e9c684d42247a68392ed16c3aad, type: 3}
   imageHolder: {fileID: 341439901}
+  positionOnScreen: 0
 --- !u!114 &2109698306
 MonoBehaviour:
   m_ObjectHideFlags: 0

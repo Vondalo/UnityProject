@@ -7,7 +7,7 @@ public class NPC_Controller : MonoBehaviour
 
     [SerializeField] public GameObject dialogue;
 
-    public virtual void ActivateDialogue()
+    public virtual void ActivateDialogue(GameObject player)
     {
         dialogue.SetActive(true);
     }
